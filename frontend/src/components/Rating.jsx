@@ -2,7 +2,7 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 const Rating = ({ value, text }) => {
   return (
-    // TODO: fixe the color of the star
+    // FIXME: fixe the color of the star
     <div className="rating">
       <span>
         {value >= 1 ? (
