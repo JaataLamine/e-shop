@@ -1,0 +1,15 @@
+{
+  "name": "e-shop",
+  "version": "2.0.0",
+  "description": "eCommerce application build with the MERN stack",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "author": "Lamine Diatta",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
