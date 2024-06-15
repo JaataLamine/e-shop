@@ -3,6 +3,8 @@ import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import { MdArrowBackIos } from "react-icons/md";
 import Rating from "../components/Rating";
 import { useGetProductDetailsQuery } from "../slices/productsApiSlice";
+import Loader from "../components/Loader";
+import Message from "../components/Message";
 
 const ProductPage = () => {
   const { id: productId } = useParams();
@@ -19,9 +21,11 @@ const ProductPage = () => {
       </Link>
 
       {isLoading ? (
-        <h2>Loading...</h2>
+        <Loader />
       ) : error ? (
-        <div>{error?.data?.message || error.error}</div>
+        <Message variant="danger">
+          {error?.data?.message || error.error}
+        </Message>
       ) : (
         <Row>
           <Col md={5}>
