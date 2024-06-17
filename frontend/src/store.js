@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { apiSlice } from "./slices/apiSlice";
-import cardSliceReducer from "./slices/cardSlice";
+import cartSliceReducer from "./slices/cardSlice";
 
 const store = configureStore({
   reducer: {
     [apiSlice.reducerPath]: apiSlice.reducer,
-    card: cardSliceReducer,
+    card: cartSliceReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(apiSlice.middleware),
