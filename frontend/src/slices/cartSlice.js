@@ -1,32 +1,32 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = localStorage.getItem("card")
-  ? JSON.parse(localStorage.getItem("card"))
-  : { cardItems: [] };
+const initialState = localStorage.getItem("cart")
+  ? JSON.parse(localStorage.getItem("cart"))
+  : { cartItems: [] };
 
 const addDecimals = (num) => {
   return Math.round((num * 100) / 100).toFixed(2);
 };
 
 const cartSlice = createSlice({
-  name: "card",
+  name: "cart",
   initialState,
   reducers: {
-    addToCard: (state, action) => {
+    addToCart: (state, action) => {
       const item = action.payload;
-      const existItem = state.cardItems.find((x) => x._id === item._id);
+      const existItem = state.cartItems.find((x) => x._id === item._id);
 
       if (existItem) {
-        state.cardItems = state.cardItems.find((x) =>
+        state.cartItems = state.cartItems.find((x) =>
           x._id === existItem._id ? item : x
         );
       } else {
-        state.cardItems = [...state.cardItems, item];
+        state.cartItems = [...state.cartItems, item];
       }
 
       // Calculate items price
       state.itemsPrice = addDecimals(
-        state.cardItems.reduce((acc, item) => acc + item.price * item.qty, 0)
+        state.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
       );
 
       // Calculate shipping price (If order is over $100 then free, else $10 shipping)
@@ -50,6 +50,6 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addToCard } = cartSlice.actions;
+export const { addToCart } = cartSlice.actions;
 
 export default cartSlice.reducer;
