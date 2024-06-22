@@ -1,10 +1,13 @@
 import express from "express";
+import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import productRoutes from "./routes/productRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
-const port = 5000;
+dotenv.config();
+
+const port = process.env.PORT || 5001;
 
 connectDB(); // Connect to MongoDB
 
