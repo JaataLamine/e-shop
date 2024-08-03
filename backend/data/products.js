@@ -1,5 +1,6 @@
 const products = [
   {
+    _id: "1",
     name: "Airpods Wireless Bluetooth Headphones",
     image: "/images/airpods.jpg",
     description:
@@ -12,6 +13,7 @@ const products = [
     numReviews: 12,
   },
   {
+    _id: "2",
     name: "iPhone 11 Pro 256GB Memory",
     image: "/images/phone.jpg",
     description:
@@ -24,6 +26,7 @@ const products = [
     numReviews: 8,
   },
   {
+    _id: "3",
     name: "Cannon EOS 80D DSLR Camera",
     image: "/images/camera.jpg",
     description:
@@ -36,6 +39,7 @@ const products = [
     numReviews: 12,
   },
   {
+    _id: "4",
     name: "Sony Playstation 4 Pro White Version",
     image: "/images/playstation.jpg",
     description:
@@ -48,6 +52,7 @@ const products = [
     numReviews: 12,
   },
   {
+    _id: "5",
     name: "Logitech G-Series Gaming Mouse",
     image: "/images/mouse.jpg",
     description:
@@ -60,6 +65,7 @@ const products = [
     numReviews: 10,
   },
   {
+    _id: "6",
     name: "Amazon Echo Dot 3rd Generation",
     image: "/images/alexa.jpg",
     description:
@@ -70,6 +76,38 @@ const products = [
     countInStock: 0,
     rating: 4,
     numReviews: 12,
+  },
+  {
+    _id: "7",
+    name: "Samsung Galaxy Z Fold6",
+    image: "/images/galaxyfold.jpg",
+    description:
+      "Reimagine what your smartphone can do with the Samsung Galaxy Z Fold6, now available at JB! This foldable smartphone boasts a stunning 7.6-inch display, an upgraded hinge for a sleeker design, and a powerful processor for seamless multitasking and immersive entertainment.",
+    brand: "Samsung",
+    category: "Electronics",
+    price: 2949.99,
+    countInStock: 10,
+    rating: 4.5,
+    numReviews: 11,
+  },
+  {
+    _id: "8",
+    name: "Apple MacBook Pro 13″ M2 2023 – 256GB",
+    image: "/images/mackbookpro.jpg",
+    description: `Apple M3 chip with 8-core CPU, 10-core GPU, 16-core Neural Engine
+        16GB unified memory
+        1TB SSD storage
+        14-inch Liquid Retina XDR display²
+        96W USB-C Power Adapter
+        Two Thunderbolt / USB 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port
+        Backlit Magic Keyboard with Touch ID - US English
+        Built for Apple Intelligence. Coming in beta this fall.⁸`,
+    brand: "Apple",
+    category: "Electronics",
+    price: 1499.99,
+    countInStock: 9,
+    rating: 4.5,
+    numReviews: 6,
   },
 ];
 
