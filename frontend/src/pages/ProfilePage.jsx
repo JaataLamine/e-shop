@@ -28,7 +28,7 @@ const ProfilePage = () => {
   useEffect(() => {
     if (userInfo) {
       setName(userInfo.name);
-      setName(userInfo.email);
+      setEmail(userInfo.email);
     }
   }, [userInfo, userInfo.name, userInfo.email]);
 
