@@ -5,14 +5,14 @@ import Message from "../../components/Message";
 import Loader from "../../components/Loader";
 import { toast } from "react-toastify";
 import {
-  useDeleteUsersMutation,
   useGetUsersQuery,
+  useDeleteUserMutation,
 } from "../../slices/usersApiSlice";
 
 const UserListPage = () => {
   const { data: users, refetch, isLoading, error } = useGetUsersQuery();
 
-  const [deleteUser, { isLoading: loadingDelete }] = useDeleteUsersMutation();
+  const [deleteUser, { isLoading: loadingDelete }] = useDeleteUserMutation();
 
   const deleteHandler = async (id) => {
     if (window.confirm("Are you sure?")) {
