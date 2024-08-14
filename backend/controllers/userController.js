@@ -120,7 +120,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
 // @route   GET /api/users
 // @access  Private/Admin
 const getUsers = asyncHandler(async (req, res) => {
-  const users = await Users.find({});
+  const users = await User.find({});
   res.status(200).json(users);
 });
 
@@ -128,7 +128,7 @@ const getUsers = asyncHandler(async (req, res) => {
 // @route   GET /api/users/:id
 // @access  Private/Admin
 const getUserById = asyncHandler(async (req, res) => {
-  const user = await Users.findById(req.params.id).select("-password");
+  const user = await User.findById(req.params.id).select("-password");
 
   if (user) {
     res.status(200).json(user);
