@@ -91,6 +91,7 @@ const ProductEditPage = () => {
       </Link>
       <FormContainer>
         <h1>Edit Product</h1>
+        {loadingUpload && <Loader />}
         {loadingUpdate && <Loader />}
         {isLoading ? (
           <Loader />
