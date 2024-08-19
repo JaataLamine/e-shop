@@ -20,6 +20,7 @@ import {
 import { addToCart } from "../slices/cartSlice";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
+import Meta from "../components/Meta";
 
 const ProductPage = () => {
   const { id: productId } = useParams();
@@ -79,6 +80,7 @@ const ProductPage = () => {
         </Message>
       ) : (
         <>
+          <Meta title={product.name} />
           <Row>
             <Col md={5}>
               <Image src={product.image} alt={product.name} fluid />
